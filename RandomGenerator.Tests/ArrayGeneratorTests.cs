@@ -6,10 +6,9 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class GeneratorTests
+    public class ArrayGeneratorTests
     {
         private const double Delta = 0.00001d;
-
 
         [TestCase(0, 0.2d)]
         [TestCase(-1, 0.2d)]
@@ -36,7 +35,6 @@
             var generator = new ArrayGenerator();
             Assert.Throws<ArgumentException>(() => generator.GenerateRandomArray(count, maxValue));
         }
-
 
         [TestCase(10, 0.2d)]
         [TestCase(500, 0.01d)]
